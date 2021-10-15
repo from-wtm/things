@@ -1,0 +1,10 @@
+.badge {
+  color: $static-white;
+}
+
+@each $color, $value in $theme-colors {
+  .badge-soft-#{$color} {
+    @include badge-variant(rgba($value, 0.175));
+    color: $value;
+  }
+}
